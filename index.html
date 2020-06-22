@@ -48,11 +48,11 @@
       -->
       <div class="form">
         <form action="" method="post">
-          <input type="text" name="fname" id="fname" placeholder="First Name" autocomplete="off" required >
-          <input type="text" name="lname" id="lname" placeholder="Last Name" autocomplete="off" required >
-          <input type="email" name="email" id="email" placeholder="Email Address"autocomplete="off" required >
-          <input type="password" name="paswd" id="paswd" placeholder="Password"autocomplete="off" required >
-          <input type="submit" value="Claim your free trial">
+          <div class="input-container"><input type="text"  id="fname" placeholder="First Name" autocomplete="off" ><label for="fname">invalid</label></div>
+          <div class="input-container"><input type="text" id="lname" placeholder="Last Name" autocomplete="off"  ><label for="lname"></label></div>
+          <div class="input-container"><input type="email" id="email" placeholder="Email Address"autocomplete="off" ><label for="email"></label></div>
+          <div class="input-container"><input type="password" id="paswd" placeholder="Password"autocomplete="off" ><label for="paswd"></label></div>
+          <div class="input-container"><input type="submit"  value="Claim your free trial"></div>
         </form>
         <p class="small">By clicking the button, you are agreeing to our <a href="http://mytermsandconditions.com">Terms and Services</a></p>
       </div>
@@ -64,5 +64,6 @@
       Coded by <a href="#">MADHAV P</a> .
     </p>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>

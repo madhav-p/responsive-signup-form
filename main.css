@@ -84,7 +84,6 @@ body {
 	margin: 1.5em 0;
 	padding: 5%;
 	border-radius: 0.5em;
-	position: relative;
 }
 
 .form input {
@@ -92,23 +91,24 @@ body {
 	font-family: inherit;
 	font-weight: var(--fw-bold);
 	color: var(--dark-blue);
+	background-color: transparent;
 	width: 100%;
 	padding: 1em;
 	border-radius: 5px;
 	border: 0.5px solid var(--grayish-blue);
 }
 
-.form input + input {
-	margin-top: 1em;
+.form div + div {
+	margin-top: 1.6em;
 }
 
-.form input:focus {
+input:focus {
 	outline: 1.5px solid var(--grayish-blue);
 }
 
-.form input[type ='submit'] {
+input[type ='submit'] {
 	color: inherit;
-	margin-top: 1.5em;
+	margin-top: 1.3em;
 	text-transform: uppercase;
 	background-color: var(--green);
 	font-weight: var(--fw-semibold);
@@ -116,7 +116,23 @@ body {
 	border: none;
 	box-shadow: 0px 5px #31b97f;
 }
-
+.form label {
+	display: none;
+}
+.error {
+	background-color: #31b97f;
+	position: relative;
+	background: url(/images/icon-error.svg) no-repeat 95% 50%;
+}
+.error label {
+	position: absolute;
+	top: 100%;
+	right: 2%;
+	font-size: x-small;
+	font-style: italic;
+	color: var(--red);
+	display: inline-block;
+}
 .small {
 	color: darkgray;
 	text-align: center;
