@@ -26,7 +26,7 @@
 
 body {
 	font-family: var(--ff);
-	font-size: clamp(12px, 2vw, 16px); /* just a temporory value*/
+	font-size: clamp(12px, 2vmin, 16px); /* just a temporory value*/
 }
 
 .mydesign {
@@ -34,38 +34,42 @@ body {
 	background-image: url(/images/bg-intro-mobile.png);
 	color: white;
 	display: flex;
-	flex-direction: column;
+	align-items: center;
 	justify-content: space-evenly;
-	height: 95vh; /*temporary value*/
-	padding: 0px 5vw;
+	flex-direction: column;
+	padding: 5vh 5vw;
 }
 
-.intro,
+.intro {
+	width: min(450px, 90vw);
+	margin: 3em 2em;
+}
+
 .cta {
-	width: min(500px, 100%);
+	width: min(400px, 90vw);
 }
-
 .title,
 .subtitle {
 	text-align: center;
+	margin: 0.5em 0em 0.5em;
 }
 
 .title {
 	font-size: 3em;
 	line-height: 1em;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
 }
 
 .box {
 	background-color: var(--blue);
-	height: 3em;
+	padding: 1em 3em;
 	border-radius: 0.5em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-
+.box p {
+	text-align: center;
+}
 .box,
 .form {
 	box-shadow: 0px 5px #d97270;
@@ -77,20 +81,19 @@ body {
 
 .form {
 	background-color: white;
-	margin-top: 1em;
-	padding: 5vmin 5vmin;
+	margin: 1.5em 0;
+	padding: 5%;
 	border-radius: 0.5em;
 	position: relative;
 }
 
 .form input {
-	font-size: inherit;
+	font-size: 0.9em;
 	font-family: inherit;
 	font-weight: var(--fw-bold);
 	color: var(--dark-blue);
 	width: 100%;
-	height: 3em;
-	padding-left: 1em;
+	padding: 1em;
 	border-radius: 5px;
 	border: 0.5px solid var(--grayish-blue);
 }
@@ -128,18 +131,21 @@ body {
 }
 
 footer {
+	background-color: lightgray;
 	height: 5vh;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 	.mydesign {
+		height: 95vh;
 		flex-direction: row;
-		align-items: center;
+		background-image: url(/images/bg-intro-desktop.png);
+	}
+	.title,
+	.subtitle {
+		text-align: left;
 	}
 }
